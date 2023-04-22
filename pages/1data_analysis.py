@@ -312,15 +312,17 @@ def consolidate():
         if len(gen_data):
                 gen_data['customer_name'] = [customers[x] for x in gen_data['customer_name']]
                 gen_data.to_csv('mastersheets\GenerationMastersheet_DGR.csv',header=False, mode='a',index=False)
+                st.write('Done!')
 
         if len(bd_data):    
                 bd_data['customer_name'] = [customers[x] for x in bd_data['customer_name']]
                 bd_data.to_csv('mastersheets\BreakdownMastersheet_DGR.csv',header=False, mode='a',index=False)
+                st.write('Done!')
 
 
         print('DGR Consolidated Successfully')
         print('-----------------------------', end='\n\n')
-        st.write('Done!')
+        
 
 
 consolidate()
