@@ -311,11 +311,11 @@ def consolidate():
         # print('gen data',gen_data)
         if len(gen_data):
                 gen_data['customer_name'] = [customers[x] for x in gen_data['customer_name']]
-                gen_data.to_csv('GenerationMastersheet_DGR.csv',header=False, mode='a',index=False)
+                gen_data.to_csv('mastersheets\GenerationMastersheet_DGR.csv',header=False, mode='a',index=False)
 
         if len(bd_data):    
                 bd_data['customer_name'] = [customers[x] for x in bd_data['customer_name']]
-                bd_data.to_csv('BreakdownMastersheet_DGR.csv',header=False, mode='a',index=False)
+                bd_data.to_csv('mastersheets\BreakdownMastersheet_DGR.csv',header=False, mode='a',index=False)
 
 
         print('DGR Consolidated Successfully')
